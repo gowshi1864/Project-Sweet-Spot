@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetSpot Bakery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fas fa-birthday-cake"></i>
+        <span>SweetSpot Bakery</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="nav-link" data-page="login">Login</a></li>
+          <li><a href="#" class="nav-link" data-page="prices">Prices</a></li>
+          <li><a href="#" class="nav-link" data-page="gallery">Gallery</a></li>
+          <li><a href="#" class="nav-link" data-page="order">Order Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="language-selector">
+        <button class="language-btn">
+          <i class="fas fa-language"></i>
+          <span class="current-language">English</span>
+        </button>
+        <div class="language-dropdown">
+          <a href="#" data-lang="en">English</a>
+          <a href="#" data-lang="ta">தமிழ் (Tamil)</a>
+          <a href="#" data-lang="hi">हिन्दी (Hindi)</a>
+          <a href="#" data-lang="te">తెలుగు (Telugu)</a>
+          <a href="#" data-lang="ml">മലയാളം (Malayalam)</a>
+          <a href="#" data-lang="kn">ಕನ್ನಡ (Kannada)</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Login Page -->
+    <section id="login" class="page active">
+      <div class="container">
+        <h1 class="page-title">Welcome to SweetSpot Bakery</h1>
+        <div class="welcome-message">
+          <h2 class="tagline">Home of Fresh Delicious Sweets</h2>
+          <h2 class="tagline">Theme based Cakes, Customized Cakes, All Flavoured Cakes and Pastries Available</h2>
+          <div class="welcome-buttons">
+            <a href="#" class="nav-link" data-page="prices">View Our Menu</a>
+            <a href="#" class="nav-link" data-page="gallery">Our Gallery</a>
+            <a href="#" class="nav-link" data-page="order">Place an Order</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prices Page -->
+    <section id="prices" class="page">
+      <div class="container">
+        <h1 class="page-title">Our Prices</h1>
+        <table class="prices-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Price (₹) / (kg)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Chocolate Cake</td><td>500</td></tr>
+            <tr><td>Vanilla Cupcake (6 pcs)</td><td>200</td></tr>
+            <tr><td>Brownies</td><td>1000</td></tr>
+            <tr><td>Red Velvet Cake</td><td>700</td></tr>
+            <tr><td>Black Forest</td><td>700</td></tr>
+            <tr><td>White Forest</td><td>700</td></tr>
+            <tr><td>Butter Cookies (12 pcs)</td><td>200</td></tr>
+            <tr><td>Blondies</td><td>950</td></tr>
+            <tr><td>Butterscotch</td><td>700</td></tr>
+            <tr><td>Jar Cake</td><td>70</td></tr>
+            <tr><td>Rainbow Cake</td><td>800</td></tr>
+            <tr><td>Choco Truffle Cake</td><td>800</td></tr>
+            <tr><td>Chocolate Overloaded Cake</td><td>900</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Gallery Page -->
+    <section id="gallery" class="page">
+      <div class="container">
+        <h1 class="page-title">Our Creations</h1>
+        <div class="gallery">
+          <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Cake+1" alt="Cake"></div>
+          <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Cake+2" alt="Cake"></div>
+          <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Cake+3" alt="Cake"></div>
+          <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Cake+4" alt="Cake"></div>
+          <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Cake+5" alt="Cake"></div>
+          <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Cake+6" alt="Cake"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Page -->
+    <section id="order" class="page">
+      <div class="container">
+        <h1 class="page-title">Place Your Order</h1>
+        <form class="order-form" id="orderForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="products">Products Needed</label>
+            <input type="text" id="products" required>
+          </div>
+          <div class="form-group">
+            <label for="kgs">Kgs needed</label>
+            <input type="number" id="kgs" step="0.1" min="0.5" required>
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" min="1" value="1" required>
+          </div>
+          <div class="form-group">
+            <label for="delivery-date">Delivery Date</label>
+            <input type="date" id="delivery-date" required>
+          </div>
+          <div class="form-group">
+            <label for="delivery-address">Delivery Address</label>
+            <textarea id="delivery-address" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="special-requests">Special Requests</label>
+            <textarea id="special-requests"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Place Order</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul class="contact-details">
+          <li><i class="fas fa-map-marker-alt"></i> Meenakshivalasu, Padiyur</li>
+          <li><i class="fas fa-phone"></i> +91 9047490076</li>
+          <li><i class="fas fa-envelope"></i> gowshsubramaniam@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
